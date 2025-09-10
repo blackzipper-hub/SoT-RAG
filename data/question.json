@@ -1,0 +1,730 @@
+[
+  {
+    "request": "How can I improve my time management skills?",
+    "outline1": "Prioritize tasks.",
+    "outline2": "Set goals and deadlines.",
+    "outline3": "Use a planner or calendar.",
+    "outline4": "Avoid multitasking.",
+    "outline5": "Eliminate distractions.",
+    "outline6": "Learn to say no."
+  },
+  {
+    "request": "What are the most effective ways to deal with stress?",
+    "outline1": "Deep breathing exercises.",
+    "outline2": "Meditation.",
+    "outline3": "Exercise regularly.",
+    "outline4": "Time management.",
+    "outline5": "Prioritize tasks.",
+    "outline6": "Seek support."
+  },
+  {
+    "request": "What are the main differences between Python and JavaScript programming languages?",
+    "outline1": "Syntax differences.",
+    "outline2": "Dynamic vs. static typing.",
+    "outline3": "Object-oriented programming.",
+    "outline4": "Built-in data types.",
+    "outline5": "Functional programming."
+  },
+  {
+    "request": "How can I increase my productivity while working from home?",
+    "outline1": "Create a dedicated workspace.",
+    "outline2": "Set a routine and stick to it.",
+    "outline3": "Minimize distractions.",
+    "outline4": "Take breaks and practice self-care.",
+    "outline5": "Stay organized and prioritize tasks.",
+    "outline6": "Establish boundaries with family and friends."
+  },
+  {
+    "request": "Can you explain the basics of quantum computing?",
+    "outline1": "Quantum bits (qubits).",
+    "outline2": "Superposition and entanglement.",
+    "outline3": "Quantum gates and algorithms.",
+    "outline4": "Quantum error correction.",
+    "outline5": "Quantum computing hardware.",
+    "outline6": "Quantum computing software."
+  },
+  {
+    "request": "What are the differences between plant-based and animal-based protein sources?",
+    "outline1": "Plant-based protein sources are generally lower in calories and fat.",
+    "outline2": "Plant-based protein sources tend to be higher in fiber and nutrients like vitamins and minerals.",
+    "outline3": "Animal-based protein sources are typically higher in protein and essential amino acids.",
+    "outline4": "Animal-based protein sources are often higher in saturated fats and cholesterol.",
+    "outline5": "Plant-based protein sources can be high in phytochemicals and antioxidants.",
+    "outline6": "Animal-based protein sources can be high in omega-3 fatty acids.",
+    "outline7": "Plant-based protein sources are often more environmentally friendly.",
+    "outline8": "Animal-based protein sources are often more expensive."
+  },
+  {
+    "request": "How can I develop my critical thinking skills?",
+    "outline1": "Analyze arguments.",
+    "outline2": "Identify assumptions.",
+    "outline3": "Evaluate evidence.",
+    "outline4": "Consider multiple perspectives.",
+    "outline5": "Practice mindfulness.",
+    "outline6": "Engage in reflective thinking."
+  },
+  {
+    "request": "What are the major challenges faced by the education sector today?",
+    "outline1": "Curriculum reform.",
+    "outline2": "Teacher shortages.",
+    "outline3": "Inequity in education.",
+    "outline4": "Limited access to quality education.",
+    "outline5": "Technological advancements."
+  },
+  {
+    "request": "What are the primary factors that influence consumer behavior?",
+    "outline1": "Social influence.",
+    "outline2": "Personal values.",
+    "outline3": "Economic factors.",
+    "outline4": "Cultural background.",
+    "outline5": "Psychological factors.",
+    "outline6": "Product attributes.",
+    "outline7": "Marketing strategies.",
+    "outline8": "Price sensitivity."
+  },
+  {
+    "request": "What are the most effective strategies for conflict resolution in the workplace?",
+    "outline1": "Mediation.",
+    "outline2": "Problem-solving collaborations.",
+    "outline3": "Communication and empathy.",
+    "outline4": "Conflict analysis.",
+    "outline5": "Alternative dispute resolution.",
+    "outline6": "Interest-based negotiations.",
+    "outline7": "Third-party neutrality.",
+    "outline8": "Power dynamics."
+  },
+  {
+    "request": "What are some potential implications of using a single-use plastic bottle versus a reusable bottle on both the environment and human health?",
+    "outline1": "Plastic pollution in oceans and landfills.",
+    "outline2": "Microplastics in water and food chain.",
+    "outline3": "Health effects of plastic exposure.",
+    "outline4": "Resource consumption and waste generation.",
+    "outline5": "Cost savings and convenience of reusable bottles.",
+    "outline6": "Changes in consumer behavior and industry practices."
+  },
+  {
+    "request": "What factors would you consider when designing an inclusive and accessible public transportation system?",
+    "outline1": "Accessibility for people with disabilities.",
+    "outline2": "Affordability for all users.",
+    "outline3": "Multilingual signage and announcements.",
+    "outline4": "Gender-neutral facilities.",
+    "outline5": "Flexible routes and schedules.",
+    "outline6": "Integration with other transportation modes.",
+    "outline7": "Real-time information and updates.",
+    "outline8": "User-friendly payment systems."
+  },
+  {
+    "request": "How can governments utilize fiscal and monetary policies to combat economic recessions?",
+    "outline1": "Fiscal policy tools: tax cuts, increased government spending.",
+    "outline2": "Monetary policy tools: interest rate adjustments, quantitative easing.",
+    "outline3": "Mix of both policies: stimulus packages, targeted spending.",
+    "outline4": "Using reserve funds: central banks' balance sheets.",
+    "outline5": "Flexible exchange rates: currency intervention.",
+    "outline6": "Structural reforms: labor market, financial sector."
+  },
+  {
+    "request": "How do language and cultural barriers affect the way people communicate and form relationships in multicultural societies?",
+    "outline1": "Cross-cultural communication challenges.",
+    "outline2": "Language barriers in everyday life.",
+    "outline3": "Limited intercultural understanding.",
+    "outline4": "Stereotyping and discrimination.",
+    "outline5": "Power dynamics in communication.",
+    "outline6": "Strategies for effective communication."
+  },
+  {
+    "request": "Describe a scenario where artificial intelligence could be used to improve the quality and efficiency of healthcare delivery.",
+    "outline1": "Personalized medicine.",
+    "outline2": "Disease diagnosis accuracy.",
+    "outline3": "Remote monitoring.",
+    "outline4": "Automated data analysis.",
+    "outline5": "Patient-specific treatment plans."
+  },
+  {
+    "request": "Explain the process of gene editing using CRISPR-Cas9 technology, and discuss its potential applications and ethical implications.",
+    "outline1": "Gene targeting",
+    "outline2": "Double-stranded DNA break",
+    "outline3": "Guide RNA",
+    "outline4": "Cas9 enzyme",
+    "outline5": "DNA repair",
+    "outline6": "Homology-directed repair",
+    "outline7": "Non-homologous end joining",
+    "outline8": "Gene knockout/knockdown",
+    "outline9": "Germline editing",
+    "outline10": "Ethical considerations"
+  },
+  {
+    "request": "How do vaccinations work to protect individuals and communities from infectious diseases, and what is herd immunity?",
+    "outline1": "Immune system stimulation.",
+    "outline2": "Antigen presentation.",
+    "outline3": "Antibody production.",
+    "outline4": "Virus neutralization.",
+    "outline5": "Herd immunity.",
+    "outline6": "Community protection."
+  },
+  {
+    "request": "How do social media platforms influence the way people consume and share news, and what are the potential implications for the spread of misinformation?",
+    "outline1": "Social media algorithms.",
+    "outline2": "News feed personalization.",
+    "outline3": "Confirmation bias.",
+    "outline4": "Echo chambers.",
+    "outline5": "Fake news."
+  },
+  {
+    "request": "How do cultural, social, and economic factors influence people's food choices, and how can this knowledge be used to promote healthier diets?",
+    "outline1": "Cultural influences on food choices.",
+    "outline2": "Social norms and peer pressure.",
+    "outline3": "Economic factors and food affordability.",
+    "outline4": "Marketing and advertising strategies.",
+    "outline5": "Food availability and accessibility.",
+    "outline6": "Cultural and social identity and food choices.",
+    "outline7": "Food education and literacy.",
+    "outline8": "Policy and regulations."
+  },
+  {
+    "request": "Explain the process of natural selection and how it contributes to the evolution and adaptation of species.",
+    "outline1": "Survival and reproduction.",
+    "outline2": "Variation and inheritance.",
+    "outline3": "Selection and adaptation.",
+    "outline4": "Genetic drift.",
+    "outline5": "Mutation and gene flow."
+  },
+  {
+    "request": "How would you introduce yourself as a medieval knight at a royal banquet?",
+    "outline1": "Chivalrous.",
+    "outline2": "Brave.",
+    "outline3": "Loyal.",
+    "outline4": "Honorable.",
+    "outline5": "Courteous."
+  },
+  {
+    "request": "As a pirate captain, what would you say to your crew to motivate them to search for hidden treasure?",
+    "outline1": "Treasure awaits.",
+    "outline2": "Brave the seas.",
+    "outline3": "Reward for effort.",
+    "outline4": "X marks the spot.",
+    "outline5": "Follow the map.",
+    "outline6": "Tales of riches.",
+    "outline7": "Anchor away!",
+    "outline8": "Shiver me timbers!"
+  },
+  {
+    "request": "If you were a Shakespearean character, how would you declare your love for someone in a soliloquy?",
+    "outline1": "Sonnets.",
+    "outline2": "Rhyming couplets.",
+    "outline3": "Passionate speech.",
+    "outline4": "Metaphorical language.",
+    "outline5": "Expressive imagery.",
+    "outline6": "Emotional intensity."
+  },
+  {
+    "request": "As a superhero, how would you explain your origin story to a curious child?",
+    "outline1": "Superpowers derived from exposure to unusual event.",
+    "outline2": "Mysterious figure with hidden past.",
+    "outline3": "Dramatic transformation sequence.",
+    "outline4": "Epic battle to save the world.",
+    "outline5": "Inspiring message of hope."
+  },
+  {
+    "request": "Imagine you are a time traveler from the year 3000. What technological advancements would you tell people about?",
+    "outline1": "Flying cars.",
+    "outline2": "Artificial intelligence.",
+    "outline3": "Nanotechnology.",
+    "outline4": "Quantum computing.",
+    "outline5": "Space colonization."
+  },
+  {
+    "request": "As a sports commentator, describe the winning play in the final seconds of a championship game.",
+    "outline1": "Game-winning shot.",
+    "outline2": "Last-second heroics.",
+    "outline3": "Clutch performance.",
+    "outline4": "Thrilling finish.",
+    "outline5": "Victory for the home team."
+  },
+  {
+    "request": "Pretend to be a world-famous chef. How would you describe your signature dish to a panel of judges?",
+    "outline1": "Fusion of flavors.",
+    "outline2": "Unique presentation.",
+    "outline3": "Emphasis on locally sourced ingredients.",
+    "outline4": "Attention to detail.",
+    "outline5": "The perfect harmony of taste and texture."
+  },
+  {
+    "request": "You are a mountain climber reaching the summit of Mount Everest. Describe your emotions and the view from the top.",
+    "outline1": "Overwhelming sense of accomplishment.",
+    "outline2": "Breathtaking panoramic view.",
+    "outline3": "Thin air and extreme cold.",
+    "outline4": "Sense of awe and wonder.",
+    "outline5": "Fresh snow and ice underfoot.",
+    "outline6": "Visibility for miles in every direction."
+  },
+  {
+    "request": "As a space colonist on Mars, describe your daily life and the challenges you face living on another planet.",
+    "outline1": "Adjusting to Martian gravity.",
+    "outline2": "Living in a pressurized habitat.",
+    "outline3": "Managing resources.",
+    "outline4": "Dealing with isolation.",
+    "outline5": "Adapting to a new environment.",
+    "outline6": "Maintaining mental health.",
+    "outline7": "Navigating Martian weather.",
+    "outline8": "Communicating with Earth.",
+    "outline9": "Growing food on Mars.",
+    "outline10": "Developing new technologies."
+  },
+  {
+    "request": "Pretend to be a character in a post-apocalyptic world. Describe how you survive and the allies you encounter.",
+    "outline1": "Scavenging for food and supplies.",
+    "outline2": "Forming a small community for mutual aid.",
+    "outline3": "Encountering other survivors and forming alliances.",
+    "outline4": "Adapting to new environments and challenges.",
+    "outline5": "Facing threats from marauders and other dangers.",
+    "outline6": "Navigating the complex web of alliances and rivalries.",
+    "outline7": "Searching for a way to restore the world to its former glory.",
+    "outline8": "Uncovering hidden secrets and mysteries of the post-apocalyptic world."
+  },
+  {
+    "request": "How can you determine if a restaurant is popular among locals or mainly attracts tourists, and why might this information be useful?",
+    "outline1": "Food quality.",
+    "outline2": "Local customer base.",
+    "outline3": "Online reviews.",
+    "outline4": "Tourist seasonality.",
+    "outline5": "Menu options.",
+    "outline6": "Prices."
+  },
+  {
+    "request": "What are some subtle clues that suggest someone is pretending to understand a topic or conversation when they are actually confused or uninformed?",
+    "outline1": "Nodding excessively.",
+    "outline2": "Asking repetitive questions.",
+    "outline3": "Providing vague or generic answers.",
+    "outline4": "Interrupting others to \"clarify\" points they don't understand.",
+    "outline5": "Displaying a lack of follow-up questions.",
+    "outline6": "Insinuating they understand when they don't."
+  },
+  {
+    "request": "Why might someone choose to use a paper map or ask for directions instead of relying on a GPS device or smartphone app?",
+    "outline1": "Tradition.",
+    "outline2": "Cost.",
+    "outline3": "Personal preference.",
+    "outline4": "Reliability concerns.",
+    "outline5": "Offline navigation."
+  },
+  {
+    "request": "How can you determine if a person is genuinely interested in a conversation or simply being polite?",
+    "outline1": "Body language.",
+    "outline2": "Eye contact.",
+    "outline3": "Prolonged responses.",
+    "outline4": "Engagement in topics.",
+    "outline5": "Active listening."
+  },
+  {
+    "request": "Why might someone prefer to shop at a small, locally-owned business instead of a large chain store, even if the prices are higher?",
+    "outline1": "Supports local economy.",
+    "outline2": "Personalized service.",
+    "outline3": "Unique products.",
+    "outline4": "Community involvement.",
+    "outline5": "Ethical business practices."
+  },
+  {
+    "request": "How can you assess the credibility of a source of information, such as a news article or blog post, without relying solely on the reputation of the author or publisher?",
+    "outline1": "Look for corroboration.",
+    "outline2": "Check sources.",
+    "outline3": "Evaluate evidence.",
+    "outline4": "Consider the publication's reputation.",
+    "outline5": "Look for transparency.",
+    "outline6": "Check for bias.",
+    "outline7": "Use fact-checking websites.",
+    "outline8": "Cross-check information."
+  },
+  {
+    "request": "Why do some people enjoy the sensation of being scared, such as by watching horror movies or going on roller coasters, while others avoid these experiences?",
+    "outline1": "Psychological factors.",
+    "outline2": "Social bonding.",
+    "outline3": "Release of endorphins.",
+    "outline4": "Adrenaline rush.",
+    "outline5": "Personal preferences.",
+    "outline6": "Brain chemistry.",
+    "outline7": "Genetic predisposition.",
+    "outline8": "Cultural influences."
+  },
+  {
+    "request": "How can observing the behavior of other people in a social situation provide clues about cultural norms and expectations?",
+    "outline1": "Social cues.",
+    "outline2": "Nonverbal communication.",
+    "outline3": "Group dynamics.",
+    "outline4": "Power dynamics.",
+    "outline5": "Role expectations."
+  },
+  {
+    "request": "Do we have a moral obligation to explore space, or should we focus on solving Earth's problems first?",
+    "outline1": "Exploration for knowledge and understanding.",
+    "outline2": "Potential resources and colonization.",
+    "outline3": "Scientific and technological advancements.",
+    "outline4": "Potential risks and hazards.",
+    "outline5": "Ethical considerations and responsibilities."
+  },
+  {
+    "request": "In a world where automation is becoming increasingly prevalent, is it more important to prioritize job creation or technological progress?",
+    "outline1": "Job preservation.",
+    "outline2": "Economic growth.",
+    "outline3": "Technological advancements.",
+    "outline4": "Workforce upskilling.",
+    "outline5": "Social safety nets."
+  },
+  {
+    "request": "How many times does the average human blink in a lifetime? Try to explain your answer. Your explanation should take the reader through your reasoning step-by-step.",
+    "outline1": "Average number of blinks per day.",
+    "outline2": "Average number of blinks per year.",
+    "outline3": "Total number of blinks in a lifetime.",
+    "outline4": "Calculation of total number of blinks.",
+    "outline5": "Factors affecting the number of blinks.",
+    "outline6": "Explanation of why the answer is what it is."
+  },
+  {
+    "request": "How many atoms are in a grain of salt? Try to explain your answer. Your explanation should take the reader through your reasoning step-by-step.",
+    "outline1": "Salt molecules are made of sodium and chlorine atoms.",
+    "outline2": "A grain of salt typically contains 6.4 x 10^22 sodium atoms.",
+    "outline3": "Each sodium atom is combined with 17 chlorine atoms to form a sodium chloride molecule.",
+    "outline4": "Therefore, a grain of salt contains approximately 1.06 x 10^23 sodium chloride molecules.",
+    "outline5": "Each molecule of sodium chloride has a molecular weight of 58.44 g/mol.",
+    "outline6": "Therefore, the mass of a grain of salt is approximately 58.44 x 10^23 grams."
+  },
+  {
+    "request": "How many lightning strikes occur on Earth each day? Try to explain your answer. Your explanation should take the reader through your reasoning step-by-step.",
+    "outline1": "Lightning flashes per second.",
+    "outline2": "Global lightning density.",
+    "outline3": "Lightning strikes per square kilometer.",
+    "outline4": "Average lightning strike duration.",
+    "outline5": "Lightning strike frequency per year.",
+    "outline6": "Total lightning strikes per year."
+  },
+  {
+    "request": "How many balloons would it take to lift a house like in the movie \"Up\"? Try to explain your answer. Your explanation should take the reader through your reasoning step-by-step.",
+    "outline1": "Balloon volume calculation.",
+    "outline2": "House weight estimation.",
+    "outline3": "Balloon lift capacity estimation.",
+    "outline4": "Total balloons required calculation.",
+    "outline5": "Explanation of limitations and assumptions."
+  },
+  {
+    "request": "How many text messages are sent globally in a minute? Try to explain your answer. Your explanation should take the reader through your reasoning step-by-step.",
+    "outline1": "Text message volume.",
+    "outline2": "Global population.",
+    "outline3": "Average text message length.",
+    "outline4": "Text message frequency.",
+    "outline5": "Messaging apps usage."
+  },
+  {
+    "request": "How many words are spoken daily on Earth? Try to explain your answer. Your explanation should take the reader through your reasoning step-by-step.",
+    "outline1": "Global population.",
+    "outline2": "Language diversity.",
+    "outline3": "Average words per day.",
+    "outline4": "Estimated words spoken daily.",
+    "outline5": "Factors affecting word count."
+  },
+  {
+    "request": "How many snowflakes fall during a typical winter? Try to explain your answer. Your explanation should take the reader through your reasoning step-by-step.",
+    "outline1": "Snowfall frequency.",
+    "outline2": "Snowfall duration.",
+    "outline3": "Temperature.",
+    "outline4": "Humidity.",
+    "outline5": "Location."
+  },
+  {
+    "request": "How many pages are in all the books ever written? Try to explain your answer. Your explanation should take the reader through your reasoning step-by-step.",
+    "outline1": "Estimate based on number of books published.",
+    "outline2": "Counting only surviving works.",
+    "outline3": "Considering average book length.",
+    "outline4": "Including non-print materials (e.g., e-books).",
+    "outline5": "Historical estimates and projections.",
+    "outline6": "Analyzing book production and consumption trends.",
+    "outline7": "Including undiscovered or lost works.",
+    "outline8": "Using published data on book production and distribution.",
+    "outline9": "Accounting for the potential for increased book production with digital technology.",
+    "outline10": "Considering the potential for a growing global population and increasing literacy rates."
+  },
+  {
+    "request": "How many times has the Earth orbited the Sun since the beginning of life? Try to explain your answer. Your explanation should take the reader through your reasoning step-by-step.",
+    "outline1": "Estimate age of Earth.",
+    "outline2": "Calculate Earth's orbital period.",
+    "outline3": "Determine number of Earth orbits since life emerged.",
+    "outline4": "Explain how life emerged.",
+    "outline5": "Provide evidence for life emergence.",
+    "outline6": "Calculate total number of Earth orbits since life emerged."
+  },
+  {
+    "request": "How many songs have been recorded throughout history? Try to explain your answer. Your explanation should take the reader through your reasoning step-by-step.",
+    "outline1": "Estimate based on historical data.",
+    "outline2": "Define music genres and sub-genres.",
+    "outline3": "Research and analyze music archives.",
+    "outline4": "Analyze cultural and social trends.",
+    "outline5": "Consider the impact of technology on music recording.",
+    "outline6": "Use statistical modeling to estimate total number of songs recorded.",
+    "outline7": "Take into account the average length of a song and the duration of music history.",
+    "outline8": "Account for the growth and evolution of music styles over time.",
+    "outline9": "Incorporate the work of music historians and experts.",
+    "outline10": "Refine estimates based on new data and research."
+  },
+  {
+    "request": "What if the Internet had been invented during the Renaissance period?",
+    "outline1": "Renaissance-era technology.",
+    "outline2": "Different adoption pace.",
+    "outline3": "Alternative applications.",
+    "outline4": "Impact on society.",
+    "outline5": "Cultural exchange."
+  },
+  {
+    "request": "What if the Aztecs had successfully repelled the Spanish conquistadors?",
+    "outline1": "Aztec empire expansion.",
+    "outline2": "Different colonial powers.",
+    "outline3": "Indigenous resistance.",
+    "outline4": "Cultural preservation.",
+    "outline5": "Impact on global history."
+  },
+  {
+    "request": "What if the Black Death had not occurred in the 14th century?",
+    "outline1": "No pandemic.",
+    "outline2": "Different disease.",
+    "outline3": "Altered history.",
+    "outline4": "Impact on society.",
+    "outline5": "Economic and cultural changes."
+  },
+  {
+    "request": "What if Isaac Newton had focused on biology instead of physics?",
+    "outline1": "New approaches to classification.",
+    "outline2": "Understanding evolution.",
+    "outline3": "Genetic discovery.",
+    "outline4": "Biological systems modeling.",
+    "outline5": "Medical applications."
+  },
+  {
+    "request": "What if the Beatles had never formed as a band?",
+    "outline1": "Alternative rock scene.",
+    "outline2": "Different musical influences.",
+    "outline3": "Impact on pop culture.",
+    "outline4": "Michael Jackson's career.",
+    "outline5": "The Rolling Stones' success."
+  },
+  {
+    "request": "What if Alan Turing had not cracked the Enigma code during World War II?",
+    "outline1": "Impact on the war effort.",
+    "outline2": "Cryptography advancements.",
+    "outline3": "Computing innovations.",
+    "outline4": "Codebreaking rivalries.",
+    "outline5": "Allied strategies."
+  },
+  {
+    "request": "What if the Suez Canal had never been constructed?",
+    "outline1": "Shipping route detour.",
+    "outline2": "Increased travel time.",
+    "outline3": "Higher transportation costs.",
+    "outline4": "Impact on global trade.",
+    "outline5": "Economic ripple effects."
+  },
+  {
+    "request": "What if the Maya civilization had never mysteriously collapsed?",
+    "outline1": "Continued prosperity.",
+    "outline2": "Different cultural exchange.",
+    "outline3": "Global influence.",
+    "outline4": "No Aztec empire.",
+    "outline5": "No Columbian exchange."
+  },
+  {
+    "request": "What if Christopher Columbus had not discovered the Americas?",
+    "outline1": "Alternative explorer.",
+    "outline2": "Different trade routes.",
+    "outline3": "Indigenous cultures.",
+    "outline4": "Impact on global history.",
+    "outline5": "New colonizers."
+  },
+  {
+    "request": "What if Vincent van Gogh had been a successful artist during his lifetime?",
+    "outline1": "Increased creativity.",
+    "outline2": "Earlier recognition.",
+    "outline3": "Financial stability.",
+    "outline4": "Increased output.",
+    "outline5": "Different style."
+  },
+  {
+    "request": "Develop a C++ program that reads a text file line by line and counts the number of occurrences of a specific word in the file.",
+    "outline1": "Reading input from file.",
+    "outline2": "Parsing and tokenizing text.",
+    "outline3": "Creating a map for word count.",
+    "outline4": "Looping through lines and counting occurrences.",
+    "outline5": "Printing the results."
+  },
+  {
+    "request": "Implement a Python function to find the longest common subsequence of two input strings using dynamic programming.",
+    "outline1": "Traditional Chinese cuisine.",
+    "outline2": "Regional specialties.",
+    "outline3": "Vegetarian options.",
+    "outline4": "Street food.",
+    "outline5": "BBQ.",
+    "outline6": "Desserts."
+  },
+  {
+    "request": "Implement a regular expression in Python to validate an email address.",
+    "outline1": "Email address format.",
+    "outline2": "Check for valid characters.",
+    "outline3": "Check for a valid domain.",
+    "outline4": "Check for an @ symbol.",
+    "outline5": "Check for a valid local part.",
+    "outline6": "Check for a valid tail."
+  },
+  {
+    "request": "Write a program to find the nth Fibonacci number using dynamic programming.",
+    "outline1": "Recursive approach.",
+    "outline2": "Memoization.",
+    "outline3": "Tabulation.",
+    "outline4": "Divide and conquer.",
+    "outline5": "Iterative approach."
+  },
+  {
+    "request": "Implement a binary search algorithm to find a specific element in a sorted array.",
+    "outline1": "Divide and Conquer",
+    "outline2": "Recursion",
+    "outline3": "Looping",
+    "outline4": "Comparison Function",
+    "outline5": "Base Case"
+  },
+  {
+    "request": "Implement a queue data structure using two stacks in Python.",
+    "outline1": "Create two stacks.",
+    "outline2": "Enqueue items in one stack.",
+    "outline3": "Dequeue items from the other stack.",
+    "outline4": "Swap the top items of the two stacks.",
+    "outline5": "Repeat steps 2-4 until the queue is empty."
+  },
+  {
+    "request": "Implement a program to find the common elements in two arrays without using any extra data structures.",
+    "outline1": "Array manipulation.",
+    "outline2": "Looping.",
+    "outline3": "Comparison.",
+    "outline4": "Logical operations.",
+    "outline5": "Memory management."
+  },
+  {
+    "request": "Given that f(x) = 5x^3 - 2x + 3, find the value of f(2).",
+    "outline1": "Dumplings are a popular type of Chinese food.",
+    "outline2": "Noodles are a staple in Chinese cuisine.",
+    "outline3": "Dim Sum is a type of small, bite-sized dish.",
+    "outline4": "Hot Pot is a communal cooking method.",
+    "outline5": "Wonton is a dish made with dumpling wrappers.",
+    "outline6": "Ma Po Tofu is a spicy tofu dish.",
+    "outline7": "Char Siu is a popular barbecued pork dish.",
+    "outline8": "Fried Rice is a staple in Chinese cuisine."
+  },
+  {
+    "request": "Solve for x in the equation 3x + 10 = 5(x - 2).",
+    "outline1": "Equation simplification.",
+    "outline2": "Factoring.",
+    "outline3": "Solving for x.",
+    "outline4": "Cancellation.",
+    "outline5": "Checking the answer."
+  },
+  {
+    "request": "If the endpoints of a line segment are (2, -2) and (10, 4), what is the length of the segment?",
+    "outline1": "Calculate the distance between endpoints.",
+    "outline2": "Use the distance formula.",
+    "outline3": "Plug in values.",
+    "outline4": "Simplify the answer."
+  },
+  {
+    "request": "Can you help me write a formal email to a potential business partner proposing a joint venture?",
+    "outline1": "Introduction.",
+    "outline2": "Overview of the joint venture proposal.",
+    "outline3": "Expected benefits for both parties.",
+    "outline4": "Proposed partnership structure.",
+    "outline5": "Next steps and timeline.",
+    "outline6": "Conclusion and signature.",
+    "outline7": "Contact information for follow-up.",
+    "outline8": "Legal terms and conditions."
+  },
+  {
+    "request": "Can you help me write a resignation letter to my current employer, while leaving on good terms and expressing gratitude for the opportunities provided?",
+    "outline1": "Express gratitude.",
+    "outline2": "State reasons for leaving.",
+    "outline3": "Offer support during transition.",
+    "outline4": "Close with professionalism.",
+    "outline5": "Include necessary details."
+  },
+  {
+    "request": "Use an appropriate format to structure a formal letter of recommendation for a student applying to a prestigious graduate program in computer science.",
+    "outline1": "Traditional dishes.",
+    "outline2": "Regional specialties.",
+    "outline3": "Fusion cuisine.",
+    "outline4": "Street food.",
+    "outline5": "Desserts.",
+    "outline6": "Beverages."
+  },
+  {
+    "request": "Write a compelling product launch announcement email to inform our customers of our new software solution.",
+    "outline1": "Introducing revolutionary software.",
+    "outline2": "Streamline your workflow.",
+    "outline3": "Enhance productivity.",
+    "outline4": "Groundbreaking features.",
+    "outline5": "Exclusive benefits.",
+    "outline6": "Try it now!"
+  },
+  {
+    "request": "Draft an apology email to a customer who experienced a delay in their order, and provide reassurance that the issue has been resolved.",
+    "outline1": "Express empathy.",
+    "outline2": "Acknowledge the delay.",
+    "outline3": "Explain the cause of the delay.",
+    "outline4": "Apologize sincerely.",
+    "outline5": "Provide reassurance.",
+    "outline6": "Offer a solution or compensation.",
+    "outline7": "Close with a positive note."
+  },
+  {
+    "request": "Write a script for a YouTube video exploring the history and cultural significance of jazz.",
+    "outline1": "Origins in African American communities.",
+    "outline2": "Influence of blues and swing.",
+    "outline3": "Development in the 1920s-40s.",
+    "outline4": "Miles Davis and John Coltrane.",
+    "outline5": "Bebop and cool jazz.",
+    "outline6": "Jazz fusion and contemporary jazz.",
+    "outline7": "Jazz as a symbol of American culture.",
+    "outline8": "Impact on popular music."
+  },
+  {
+    "request": "Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions.",
+    "outline1": "Tropical beaches.",
+    "outline2": "Volcanic landscapes.",
+    "outline3": "Polynesian culture.",
+    "outline4": "Aloha spirit.",
+    "outline5": "Luaus and feasts.",
+    "outline6": "Waterfalls and hikes.",
+    "outline7": "Surfing and snorkeling.",
+    "outline8": "Island hopping."
+  },
+  {
+    "request": "Write a captivating movie review for a recently released science fiction film, discussing its plot, characters, and special effects.",
+    "outline1": "Science fiction setting.",
+    "outline2": "Unique plot twist.",
+    "outline3": "Compelling characters.",
+    "outline4": "Impressive special effects.",
+    "outline5": "Thought-provoking themes.",
+    "outline6": "Memorable performances.",
+    "outline7": "Well-crafted pacing.",
+    "outline8": "Impactful score.",
+    "outline9": "Visually stunning.",
+    "outline10": "Originality stand out."
+  },
+  {
+    "request": "Structure a podcast script for an episode discussing the influence of streaming platforms on the music industry.",
+    "outline1": "Streaming services revolutionize music industry.",
+    "outline2": "Impact on record labels and artists.",
+    "outline3": "Changes in music consumption habits.",
+    "outline4": "The rise of playlist culture.",
+    "outline5": "Opportunities and challenges for independent artists.",
+    "outline6": "The future of the music industry in the streaming era."
+  },
+  {
+    "request": "Write a symphony concert review, discussing the orchestra's performance and overall audience experience.",
+    "outline1": "Musicality.",
+    "outline2": "Instrumentation.",
+    "outline3": "Maestro's conducting.",
+    "outline4": "Audience engagement.",
+    "outline5": "Venue acoustics.",
+    "outline6": "Overall impact."
+  }
+]
