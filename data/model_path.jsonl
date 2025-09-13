@@ -1,0 +1,5 @@
+{"model_name": "Llama-2-7b-chat-hf", "model_path": "/home/sunkai/SoT_RAG_resources/model_ckpt/Llama-2-7b-chat-hf"}
+{"model_name": "Qwen2.5-1.5B", "model_path": "/home/sunkai/SoT_RAG_resources/model_ckpt/Qwen2.5-1.5B"}
+{"model_name": "deepseek-R1-Qwen", "model_path": "/home/sunkai/SoT_RAG_resources/model_ckpt/deepseek-R1-Qwen"}
+{"model_name": "phi-2_hf", "model_path": "/home/sunkai/SoT_RAG_resources/model_ckpt/phi-2_hf"}
+{"model_name": "t5-large", "model_path": "/home/sunkai/SoT_RAG_resources/model_ckpt/t5-large"}
