@@ -450,6 +450,111 @@ def evaluate_pipeline(model_name,predictions,save_output_path,dataset_name = "sq
     print(f" BLEU: {bleu_res if isinstance(bleu_res, dict) else bleu_res}")
 
     return metrics
+
+
+def LLM_as_a_judge(predictions,model_name,queries): ## query是listof request
+    import openai
+    from openai import OpenAI
+    
+    client = OpenAI()
+    results = []
+    
+    evaluate_prompt = """
+    Please judge the following answers based on their queries. Only return the results in json format and don't return
+    any other things.
+    
+    query: {query}
+    answer: {answer}
+    
+    Evaluation Dimensions (10 points each):
+    1. Accuracy: The extent to which the answer aligns with the facts.
+    2. Completeness: The degree to which the answer covers all requests of the queries.
+    3. Relevance: The extent to which the answer is related to the question.
+    4. Clarity: The clearness of the answer's expression.
+    5. Practicality: The practical value of the answer.
+    
+    return format: 
+    {{
+        "accuracy": 
+        "completeness": 
+        "relevance": 
+        "clarity": 
+        "usefulness": 
+        "overall": 
+        "comments": 
+    }}
+    
+    """
+    
+    for i, query , prediction in enumerate(zip(queries,predictions)):
+        prompt = evaluate_prompt.format(query=query,answer=prediction)
+        
+        try:
+            response = client.chat.completions.create(
+                model = model_name,
+                messages=[
+                    {"role": "user" , "content": prompt}
+                ],
+                temperature= 0.1,
+                max_tokens= 1000
+            )
+            evaluation_text = response.choices[0].message.content.strip()
+            
+            try:
+                evaluation_scores = json.loads(evaluation_text)
+            except json.JSONDecodeError:
+                # If JSON parsing fails, create a default response
+                evaluation_scores = {
+                    "accuracy": 0,
+                    "completeness": 0,
+                    "relevance": 0,
+                    "clarity": 0,
+                    "usefulness": 0,
+                    "overall": 0,
+                    "comments": "Failed to parse evaluation response"
+                }
+            result_entry = {
+                "index" : i,
+                "query": query,
+                "prediction" : prediction,
+                "evaluation" : evaluation_scores
+            }
+            
+            results.append(result_entry)
+            print(f"Processed query {i+1}/{len(queries)}")
+        
+        except Exception as e:
+            print(f"Error processing query {i+1}: {str(e)}")
+            # Create error entry
+            error_entry = {
+                "index": i,
+                "query": query,
+                "prediction": prediction,
+                "evaluation": {
+                    "accuracy": 0,
+                    "completeness": 0,
+                    "relevance": 0,
+                    "clarity": 0,
+                    "usefulness": 0,
+                    "overall": 0,
+                    "comments": f"Error during evaluation: {str(e)}"
+                }
+            }
+            results.append(error_entry)
+    
+    output_data = {
+        "model":model_name,
+        "total_evaluation":len(results),
+        "results": results
+    }
+    with open('LLM_judge_result.json', 'w', encoding='utf-8') as f:
+        json.dump(output_data, f, indent=2, ensure_ascii=False)
+    
+    print(f"Results saved to LLM_judge_result.json")
+    print(f"Total evaluations: {len(results)}")
+    
+    return results
    
+
 
 ## main pipeline
