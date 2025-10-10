@@ -13,6 +13,7 @@ from accelerate import Accelerator
 from accelerate.logging import get_logger
 from accelerate.utils import set_seed
 from datasets import load_dataset
+import datasets
 from torch.utils.data import DataLoader
 from tqdm.auto import tqdm
 from typing import Dict
@@ -191,8 +192,14 @@ def encode_with_sot_format(example, tokenizer, max_seq_length):
     The 'output' field contains a list of Socratic questions.
     We format this as instruction-following data for training.
     '''
+    #Generate the prompt
+    prompt = "Please generate only the framework, do not generate any other content."
+
+    #Use the prompt when coding
+    formatted_instruction = prompt + example['instruction']
+
     # Format the instruction
-    source_text = PROMPT_DICT["sot_prompt"].format_map(example)
+    source_text = PROMPT_DICT["sot_prompt"].format_map({'instruction': formatted_instruction})
     
     # Format the output list as a numbered list
     if isinstance(example['output'], list):
