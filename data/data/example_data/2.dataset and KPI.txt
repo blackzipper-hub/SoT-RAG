@@ -1,0 +1,371 @@
+1.ELI5
+名称：ELI5 (Explain Like I’m Five)
+
+任务类型：开放域长篇生成问答 (Open-domain Long-form QA / Abstractive QA)
+
+来源：
+Reddit 三个子版块：
+
+r/explainlikeimfive
+
+r/askscience
+
+r/AskHistorians
+数据来自 Pushshift.io Reddit dumps (2012–2019)。
+
+规模：
+
+r/explainlikeimfive：train 272,634；validation 9,812；test 24,512
+
+r/askscience：train 131,778；validation 2,281；test 4,462
+
+r/AskHistorians：train 98,525；validation 4,901；test 9,764
+
+字段：
+
+q_id: string，问题 ID
+
+subreddit: string，来源子版块
+
+title: string，问题标题（带 URL 标记化）
+
+title_urls: liststring，标题中提取的 URL
+
+selftext: string，补充描述（可为空）
+
+selftext_urls: liststring，补充描述中的 URL
+
+answers: list，包含：
+
+    a_id: string，答案 ID
+
+    text: string，答案文本（URL 已归一化）
+
+    score: int，答案的 upvote 数
+
+answers_urls: liststring，答案中提取的 URL
+
+标注：
+
+✅ 用户编写的问题与答案
+
+⛔ 没有额外人工标注
+
+✅ 答案按 Reddit upvotes 排序
+
+适用指标：
+
+ROUGE-L（生成答案和参考答案的相似度）
+
+也可用 BLEU、METEOR 等长文本生成指标
+
+引用：
+
+@inproceedings{eli5_lfqa,
+  author    = {Angela Fan and
+               Yacine Jernite and
+               Ethan Perez and
+               David Grangier and
+               Jason Weston and
+               Michael Auli},
+  title     = {{ELI5:} Long Form Question Answering},
+  booktitle = {Proceedings of the 57th ACL},
+  year      = {2019},
+  pages     = {3558--3567},
+  publisher = {ACL},
+  doi       = {10.18653/v1/p19-1346}
+}
+
+
+
+2.NarrativeQA
+
+名称：NarrativeQA (Narrative Question Answering Challenge)
+
+任务类型：阅读理解 / 长文档问答（Summaries-only & Stories-only 两种任务）
+
+来源：
+
+故事文本：来自 Project Gutenberg
+
+电影剧本：来自 IMSDB 等脚本库
+
+问题 & 答案：Amazon Mechanical Turk 工人基于 Wikipedia 人工摘要编写
+
+规模：
+
+训练集：32,747
+
+验证集：3,461
+
+测试集：10,557
+
+字段：
+
+document: 包含故事/剧本信息
+
+id: string，唯一 ID
+
+kind: string，"movie" 或 "gutenberg"
+
+url: string，下载来源 URL
+
+file_size: int，文件大小
+
+word_count: int，词数
+
+start: string，前三个 token
+
+end: string，最后三个 token
+
+summary: {
+text: string，维基百科摘要
+tokens: list，token 化的摘要
+url: string，维基百科 URL
+title: string，维基百科标题
+}
+
+text: string，完整故事或剧本内容
+
+question: {
+text: string，问题文本
+tokens: list，问题 token
+}
+
+answers: list，包含多个 {
+text: string，答案文本
+tokens: list，答案 token
+}
+
+标注：
+
+✅ 问题与答案由 Amazon Turk 工人编写
+
+✅ 基于人工摘要设计问答，确保问题不依赖局部上下文
+
+⛔ 没有额外标注层级
+
+适用指标：
+
+ROUGE, BLEU, METEOR
+
+用于评估模型对长文本的推理与理解能力
+
+引用：
+
+@article{kocisky-etal-2018-narrativeqa,
+    title = "The {N}arrative{QA} Reading Comprehension Challenge",
+    author = "Ko{\v{c}}isk{\'y}, Tom{\'a}{\v{s}} and Schwarz, Jonathan and Blunsom, Phil and Dyer, Chris and Hermann, Karl Moritz and Melis, G{\'a}bor and Grefenstette, Edward",
+    journal = "Transactions of the Association for Computational Linguistics",
+    volume = "6",
+    year = "2018",
+    pages = "317--328",
+    doi = "10.1162/tacl_a_00023"
+}
+
+
+
+3.Dataset Card for GovReport
+Dataset Summary
+
+GovReport is a dataset for long document summarization, specifically government reports. It is designed to evaluate models’ ability to process lengthy contexts (up to ~9k tokens) and generate concise summaries.
+
+Supported Tasks and Leaderboards
+
+The dataset is primarily used for long document summarization.
+It is compatible with the run_summarization.py script from HuggingFace Transformers.
+
+Languages
+
+English
+
+Dataset Structure
+Data Instances
+
+A typical data point consists of the full text of a government report and its human-written summary.
+
+Example:
+
+{
+    "id": "gov_12345",
+    "report": "Full body text of the government report...",
+    "summary": "Concise summary of the key points."
+}
+
+Data Fields
+
+id: Unique paper ID.
+
+report: The full text of the government report (string).
+
+summary: Human-written summary of the report (string).
+
+Data Splits
+
+The dataset has three splits:
+
+Split	Number of Instances	Avg. Tokens (report / summary)
+Train	17,517	< 9,000 / < 500
+Validation	973	< 9,000 / < 500
+Test	973	< 9,000 / < 500
+Dataset Creation
+Curation Rationale
+
+The dataset was created to benchmark summarization models on long government reports, a real-world use case where documents are substantially longer than typical datasets.
+
+Source Data
+
+Initial Data Collection and Normalization: Reports collected from U.S. government publications.
+
+Who are the source language producers?: U.S. government agencies.
+
+Annotations
+
+Annotation process: Human-written summaries paired with each report.
+
+Who are the annotators?: Details not explicitly described in the source paper.
+
+Personal and Sensitive Information
+
+None.
+
+Considerations for Using the Data
+Social Impact of Dataset
+
+The dataset helps in developing summarization systems for government and public reports, potentially improving accessibility of lengthy documents.
+
+Discussion of Biases
+
+Focused only on U.S. government reports; may not generalize to other domains.
+
+Other Known Limitations
+
+Extremely long input texts can challenge many models due to context length limits.
+
+Additional Information
+Dataset Curators
+
+Authors of the GovReport paper: Luyang Huang, Shuyang Cao, Nikolaus Parulian, Heng Ji, and Lu Wang.
+
+Licensing Information
+
+The dataset is adapted from the cited paper and repo. License not explicitly stated.
+
+Citation Information
+@misc{huang2021efficient,
+      title={Efficient Attentions for Long Document Summarization}, 
+      author={Luyang Huang and Shuyang Cao and Nikolaus Parulian and Heng Ji and Lu Wang},
+      year={2021},
+      eprint={2104.02112},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+
+
+
+4.Dataset Card for PubMedQA
+Dataset Summary
+
+PubMedQA is a biomedical question answering dataset designed to test whether models can answer yes/no/maybe research questions based on PubMed abstracts.
+Example: “Do preoperative statins reduce atrial fibrillation after coronary artery bypass grafting?”
+
+Supported Tasks and Leaderboards
+
+Task: Biomedical Question Answering (Yes/No/Maybe)
+
+Official Leaderboard: https://pubmedqa.github.io/
+
+Languages
+
+English
+
+Dataset Structure
+Data Instances
+
+Each instance consists of a biomedical research question, an associated PubMed abstract (context), and an answer (yes/no/maybe).
+
+Example (simplified):
+
+{
+    "id": "pqa_labeled_001",
+    "question": "Do preoperative statins reduce atrial fibrillation after coronary artery bypass grafting?",
+    "context": "Abstract text from PubMed...",
+    "answer": "yes"
+}
+
+Data Fields
+
+id: Unique question identifier
+
+question: Research question (string)
+
+context: PubMed abstract text (string)
+
+answer: One of {yes, no, maybe}
+
+Data Splits
+
+The dataset provides three subsets:
+
+pqa_labeled: 1k expert-annotated QA pairs (500 used as test set)
+
+pqa_unlabeled: ~211k automatically collected question–abstract pairs without labels
+
+pqa_artificial: 61k synthetic QA pairs generated from PubMed abstracts
+
+Test set (500 questions) is available here: GitHub - PubMedQA
+
+Dataset Creation
+Curation Rationale
+
+Designed to evaluate biomedical QA systems on realistic research questions using PubMed abstracts.
+
+Source Data
+
+Initial Data Collection and Normalization: Questions and abstracts are collected from PubMed.
+
+Who are the source language producers?: Biomedical researchers publishing on PubMed.
+
+Annotations
+
+Annotation process: A subset (pqa_labeled) is annotated by domain experts with yes/no/maybe answers.
+
+Who are the annotators?: Biomedical domain experts.
+
+Personal and Sensitive Information
+
+None; dataset contains biomedical research abstracts, not personal data.
+
+Considerations for Using the Data
+Social Impact of Dataset
+
+Enables progress in biomedical question answering, potentially benefiting medical research and clinical decision support.
+
+Discussion of Biases
+
+Abstracts may not contain sufficient information to conclusively answer some questions.
+
+Automated collection (pqa_unlabeled, pqa_artificial) introduces noise.
+
+Other Known Limitations
+
+Limited size of expert-labeled test set (500 examples).
+
+Biomedical domain specificity → may not generalize outside PubMed literature.
+
+Additional Information
+Dataset Curators
+
+Original dataset introduced by Jin et al., 2019.
+
+Licensing Information
+
+License information not explicitly stated in the source page.
+
+Citation Information
+@inproceedings{jin2019pubmedqa,
+  title={PubMedQA: A Dataset for Biomedical Research Question Answering},
+  author={Di Jin and Bhuwan Dhingra and Zhengping Zhou and William Cohen and Xinghua Lu},
+  booktitle={Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year={2019}
+}

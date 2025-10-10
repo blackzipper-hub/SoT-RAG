@@ -1,0 +1,170 @@
+压缩效果（对应任务目标4）
+
+CNN / DailyMail Dataset
+
+名称：CNN / DailyMail Dataset
+
+任务类型：
+
+抽取式 & 生成式摘要（Extractive & Abstractive Summarization）
+
+（早期版本 v1.0.0 用于机器阅读理解 & 问答，v2.0.0+ 主要用于摘要任务）
+
+来源：
+
+新闻文章及作者撰写的 highlights（CNN：2007–2015，Daily Mail：2010–2015）
+
+由 Google DeepMind 最初收集并处理，后续 Stanford & IBM Watson 团队修订
+
+v1.0.0：支持 Cloze-style QA（匿名化实体）
+
+v2.0.0 / v3.0.0：支持文本摘要（其中 v3.0.0 不再匿名化）
+
+规模（Version 3.0.0）：
+
+训练集：287,113
+
+验证集：13,368
+
+测试集：11,490
+
+平均 token 长度：
+
+文章（article）：≈ 781
+
+高亮（highlights）：≈ 56
+
+字段：
+
+id: string，新闻原始 URL 的 SHA1 哈希
+
+article: string，新闻正文
+
+highlights: string，由作者撰写的文章摘要（gold summary）
+
+示例：
+
+{
+  "id": "0054d6d30dbcad772e20b22771153a2a9cbeaf62",
+  "article": "(CNN) -- An American woman died aboard a cruise ship ...",
+  "highlights": "The elderly woman suffered from diabetes and hypertension ... Previously, 86 passengers had fallen ill ..."
+}
+
+
+标注：
+
+摘要由新闻记者撰写（非众包）
+
+无额外人工标注
+
+适用指标：
+
+ROUGE-1 / ROUGE-2 / ROUGE-L
+
+BLEU（可选）
+
+许可信息：
+
+v1.0.0 在 Apache-2.0 License 下发布
+
+v2.0.0 / v3.0.0 遵循新闻源网站条款
+
+引用：
+
+@inproceedings{see-etal-2017-get,
+    title = "Get To The Point: Summarization with Pointer-Generator Networks",
+    author = "See, Abigail and Liu, Peter J. and Manning, Christopher D.",
+    booktitle = "Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    year = "2017",
+    address = "Vancouver, Canada",
+    publisher = "Association for Computational Linguistics",
+    pages = "1073--1083",
+    url = "https://www.aclweb.org/anthology/P17-1099",
+    doi = "10.18653/v1/P17-1099"
+}
+
+@inproceedings{DBLP:conf/nips/HermannKGEKSB15,
+  author = {Karl Moritz Hermann and Tom{\'a}{\v{s}} Kocisk{\'y} and Edward Grefenstette and Lasse Espeholt and Will Kay and Mustafa Suleyman and Phil Blunsom},
+  title = {Teaching Machines to Read and Comprehend},
+  booktitle = {NIPS},
+  year = {2015},
+  pages = {1693--1701},
+  url = {http://papers.nips.cc/paper/5945-teaching-machines-to-read-and-comprehend}
+}
+
+
+
+
+GovReport Dataset
+
+名称：GovReport Dataset
+
+任务类型：
+
+长文档摘要（Long-document Abstractive Summarization）
+
+来源：
+
+来自美国政府报告（U.S. Government Accountability Office, Congressional Research Service 等公开报告）
+
+由 [Huang et al., 2021] 收集与清理，用于长文档摘要研究
+
+规模：
+
+训练集（train）：17,517
+
+验证集（validation）：973
+
+测试集（test）：973
+
+文本长度：
+
+report（正文）：< 9,000 tokens（RoBERTa tokenizer 统计）
+
+summary（摘要）：< 500 tokens
+
+字段：
+
+id: string，文档 ID
+
+report: string，政府报告的正文
+
+summary: string，报告提供的人工摘要
+
+示例：
+
+{
+  "id": "CRS-1001",
+  "report": "The U.S. Government Accountability Office reviewed ...",
+  "summary": "The report examines federal budget planning and highlights ..."
+}
+
+
+标注：
+
+摘要由原始政府机构人工撰写（非众包）
+
+无额外编辑或自动生成
+
+适用指标：
+
+ROUGE-1 / ROUGE-2 / ROUGE-L
+
+BLEU（可选）
+
+BERTScore（适合长文档摘要）
+
+许可信息：
+
+来源于公开的美国政府文件，属于 Public Domain（美国政府出版物不受版权保护）
+
+引用：
+
+@misc{huang2021efficient,
+      title={Efficient Attentions for Long Document Summarization}, 
+      author={Luyang Huang and Shuyang Cao and Nikolaus Parulian and Heng Ji and Lu Wang},
+      year={2021},
+      eprint={2104.02112},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}

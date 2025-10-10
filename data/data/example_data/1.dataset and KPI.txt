@@ -1,0 +1,215 @@
+1.Natural Questions (示例)
+名称：Natural Questions
+任务类型：开放域问答 (Open-domain QA)
+来源：Google 搜索问题 + Wikipedia 文档
+规模：train 307,373；validation 7,830；test 官方未提供
+字段：
+id
+document (title, url, html, tokens)
+question (text, tokens)
+long_answer_candidates
+annotations (long_answer, short_answers, yes_no_answer)
+标注：有人类标注，包含 gold evidence（long answer span, short answer span, yes/no）
+适用指标：EM、F1、Evidence F1、Recall@k
+引用：
+@article{47761,
+  title   = {Natural Questions: a Benchmark for Question Answering Research},
+  author  = {Tom Kwiatkowski et al.},
+  year    = {2019},
+  journal = {Transactions of the Association of Computational Linguistics}
+}
+
+
+
+
+2.TriviaQA
+名称：TriviaQA
+任务类型：阅读理解 / 开放域问答 (Reading Comprehension / Open
+domain QA)
+来源：Trivia 爱好者编写的问题 + 独立收集的证据文档（平均每个问题约 6 个文档）
+规模：
+rc: train 138,384；validation 18,669；test 17,210
+rc.nocontext: train 138,384；validation 18,669；test 17,210
+unfiltered: train 87,622；validation 11,313；test 10,832
+unfiltered.nocontext: train 87,622；validation 11,313；test 10,832
+字段：
+question: string，问题文本
+question_id: string，问题 ID
+question_source: string，问题来源
+entity_pages: dict，包含文档信息（doc_source, filename, title, wiki_context 等）
+search_results: dict，包含搜索结果（description, title, url, search_context 等）
+aliases: list[string]，答案别名
+normalized_value: string，标准化后的答案
+value: string，答案原文
+标注：
+✅ 人类编写的问题
+✅ gold 答案（答案字符串，部分版本带证据文档）
+⛔ 部分 evidence 仅为 distant supervision，不是完全人工标注
+适用指标：
+EM (Exact Match)
+F1 Score
+Evidence Recall@k（如果使用文档证据）
+引用：
+@article{2017arXivtriviaqa,
+       author = {Joshi, Mandar and Choi, Eunsol and Weld, Daniel and Zettlemoyer, Luke},
+       title  = {triviaqa: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension},
+       journal= {arXiv e-prints},
+       year   = {2017},
+       eid    = {arXiv:1705.03551},
+       pages  = {arXiv:1705.03551},
+       archivePrefix = {arXiv},
+       eprint = {1705.03551}
+}
+
+
+
+
+3.MS MARCO QA（Microsoft MAchine Reading COmprehension）
+名称：MS MARCO QA / Microsoft MS MARCO
+任务类型：问答 / 阅读理解 / 排序 + 生成
+来源：Bing 搜索日志中的真实查询 + 人工答案 + 从网页检索的多个 passages 作为上下文 
+规模 / 划分（以 v1.1 和 v2.1 两个版本为例） 
+v1.1
+train：82,326 条 
+validation：10,047 条 
+test：9,650 条 
+v2.1（扩展版本）
+train：约 808,731 条 
+validation：约 101,093 条 
+test：约 101,092 条 
+字段 (Data Fields)： 
+answers：答案（多个可能答案的列表）
+passages：多个 passages（文本）
+is_selected：布尔 / int，标记这个 passage 是否被选中为正确答案
+passage_text：每个 passage 的文本内容
+url：passage 来源的 URL
+query：问题文本
+query_id：问题 ID
+query_type：问题类型（类别标识）
+wellFormedAnswers：标准答案的可能形式（列表）
+标注 / Gold 证据：
+有人工回答（答案文本） 
+有 passages 作为上下文，但并不是所有 passages 都被标为 gold 证据； is_selected 字段标注哪些 passages 是“正确（选中）”的答案文档或段落 
+不像 HotpotQA 那样每个问题有明确的 supporting facts span，MS MARCO 更偏向于“哪个 passage 是正确的 / 被选中”这种标签方式
+适用指标：
+EM / F1（回答文本正确性）
+Passage / Document Ranking 指标：例如 Precision@k, Recall@k, MRR（对 passages 排序效果）
+如果做生成任务：BLEU / ROUGE / BERTScore 等
+引用 / 论文：
+@article{2016MSMARCO,
+  title = {MS MARCO: A Human Generated MAchine Reading COmprehension Dataset},
+  author = {Payal Bajaj, Daniel Campos, Nick Craswell, Li Deng, Jianfeng Gao, Xiaodong Liu, Rangan Majumder, Andrew McNamara, Bhaskar Mitra, Tri Nguyen, Mir Rosenberg, Xia Song, Alina Stoica, Saurabh Tiwary, Tong Wang},
+  year = {2016},
+  journal = {arXiv preprint arXiv:1611.09268}
+}
+
+
+
+
+4.HotpotQA （提取信息）
+
+名称：HotpotQA
+
+任务类型：多跳问答 (Multi-hop QA) / 阅读理解 + 支持事实预测
+语言：English 
+规模 / 划分：
+  - 在 “distractor” 配置下：train 90,447；validation 7,405 
+  - 在 fullwiki 配置下也有对应数据集（用于更开放域场景） 
+数据字段 (Data Fields)：
+  - id（字符串）
+  - question（字符串）
+  - answer（字符串）
+  - type（字符串，题型，如 “bridge” / “comparison”）
+  - level（字符串，难度级别）
+  - supporting_facts（字典，包含 title 和 sent_id）
+  - context（字典，包含 title 和 sentences 列表）
+
+标注 / Gold 证据：
+  - ✅ 有人工标注的支持事实（即句子级的 supporting facts）
+  - ✅ 有答案文本部分 
+适用指标：
+  - 答案准确性：Exact Match (EM)、F1
+  - 支持事实预测准确度 / 覆盖率（Supporting Facts EM / F1 / Recall）
+  - 联合指标（同时正确答案和支持事实）
+
+引用 / 论文：
+
+@inproceedings{yang2018hotpotqa,
+  title = {HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering},
+  author = {Zhilin Yang and Peng Qi and Saizheng Zhang et al.},
+  booktitle = {EMNLP 2018},
+  year = {2018}
+}
+
+
+
+
+5.2WikiMultiHopQA 提取信息
+名称：2WikiMultiHopQA
+任务类型：多跳问答 (Multi-hop QA) / 推理问答
+语言：English 
+规模 / 大小区间：100K < 样本数 < 1M 
+                            全集约 192,606 条样本 
+许可证：Apache-2.0 
+数据字段 / 样本结构：
+每条样本通常具备（参考 GitHub / 数据集说明）
+_id：样本唯一 ID 
+question：问题文本 
+answer：答案文本（测试集可能无答案） 
+supporting_facts：支持事实（句子级别，用 [title, sent_id] 表示） 
+context：上下文段落列表，每段为 [title, sentences] 
+evidences：三元组证据 (subject entity, relation, object entity) 
+type：问题类型（如 comparison, inference, compositional, bridge-comparison） 
+entity_ids：对应段落的 Wikidata 实体 id（如 'Q7320430_Q51759'）
+标注 / 证据：
+包含支持事实（supporting_facts）用于解释答案 
+包括结构化三元组证据 (evidences) 作为推理链解释 
+问题类型被分为四种：comparison, inference, compositional, bridge-comparison 
+适用指标 / 评价：
+答案准确性：Exact Match (EM)、F1
+支持事实准确性 / 覆盖率 (supporting facts EM / F1)
+证据三元组匹配 (evidences)
+联合指标：答案 + 证据正确同时通过的比例
+引用 / 论文：
+@inproceedings{xanh2020_2wikimultihop,
+  title = {Constructing A Multi-hop {QA} Dataset for Comprehensive Evaluation of Reasoning Steps},
+  author = {Xanh Ho and Duong Nguyen, Anh-Khoa and Saku Sugawara and Akiko Aizawa},
+  booktitle = {Proceedings of the 28th International Conference on Computational Linguistics},
+  month = dec,
+  year = {2020},
+  address = {Barcelona, Spain (Online)},
+  pages = {6609--6625},
+  url = {https://www.aclweb.org/anthology/2020.coling-main.580}
+}
+``` :contentReference[oaicite:16]{index=16}
+
+
+
+
+6.BEIR Benchmark（部分子集 / 总体）
+任务类型：信息检索 (Information Retrieval, IR) / 零样本检索评估 (Zero-shot Retrieval)
+语言：主要是 English 
+规模 / 结构：
+  - BEIR 汇集了 18 个公开检索数据集，覆盖多个领域和任务 
+  - 这些子集包括不同规模的文档库与查询集合（例如从几千条文档到百万级文档） 
+  - 在 BEIR 框架里，MS MARCO 虽有训练集/开发集，但在零样本评估里通常不把它纳入比较对照中 
+数据字段 / 样本结构：
+  - query / queries：检索任务的查询文本
+  - documents / corpus：候选文档集合
+  - qrels（query relevance judgments）：每个 query 与一些文档之间的相关性标签（relevance）
+  - 子集里可能还会含有 passage_id、文档 ID、文档文本 (title / body) 等
+
+标注 / Gold 证据：
+  - 为每个 query 有手工标注的相关文档（relevant / nonrelevant 标签） 
+  - 有些子集甚至带有分级相关性标签（graded relevance）而不是仅二元标签
+适用指标 / 评价方式：
+  - nDCG@k（标准化折损累积增益）是 BEIR 推荐的主要指标 
+  - Recall@k、MRR、Precision@k 等传统检索指标也常用 
+  - 因为是零样本评估，强调模型在未见领域 / 子集上的泛化能力
+引用 / 论文：
+@article{Thakur2021BEIR,
+  title = {BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models},
+  author = {Nandan Thakur and Nils Reimers and Andreas Rücklé and Abhishek Srivastava and Iryna Gurevych},
+  year = {2021},
+  journal = {arXiv preprint arXiv:2104.08663}
+}
